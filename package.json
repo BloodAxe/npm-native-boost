@@ -1,0 +1,34 @@
+{
+  "name": "native-boost",
+  "version": "1.46.0",
+  "description": "Boost library installed via NMP",
+  "keywords": [
+    "boost",
+    "native",
+    "bindings"
+  ],
+  "main": "boost.js",
+  "author": "Eugene Khvedchenya <ekhvedchenya@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/BloodAxe/npm-native-boost.git"
+  },
+  "scripts": {
+    "postinstall": "node installer.js"
+  },
+  "contributors": [
+    "Eugene Khvedchenya <ekhvedchenya@gmail.com> (https://github.com/BloodAxe)"
+  ],
+  "dependencies": {
+    "decompress": "^2.0.0",
+    "decompress-unzip": "^2.0.1",
+    "download": "^3.0.1",
+    "download-status": "^2.0.4"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BloodAxe/npm-native-boost/issues",
+    "email": "ekhvedchenya@gmail.com"
+  },
+  "homepage": "https://github.com/BloodAxe/npm-native-boost"
+}
