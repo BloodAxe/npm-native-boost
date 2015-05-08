@@ -24,7 +24,7 @@ function mangleName(name, version, debug) {
     if (isWindows())
     {
         prefix = 'lib';
-        suffix = '-vc120-mt-s' + (debug ? 'gd' : '');
+        suffix = '-vc120-mt-s' + (debug ? 'gd' : '') + '-' + version;
         ext = '.lib';
     }
     else if (isDarwin())
@@ -50,6 +50,7 @@ module.exports = {
         
         var bst_libraries = [];
 
+        if (isWindows()) {
             var boost_lib_dir = path.resolve(__dirname, 'boost', 'lib');
 
             bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_atomic',              this.version, debug));
@@ -73,7 +74,6 @@ module.exports = {
             bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_math_tr1',            this.version, debug));
             bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_prg_exec_monitor',    this.version, debug));
             bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_program_options',     this.version, debug));
-            bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_python',              this.version, debug));
             bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_random',              this.version, debug));
             bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_regex',               this.version, debug));
             bst_libraries.push(boost_lib_dir + '/' + mangleName('boost_serialization',       this.version, debug));

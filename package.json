@@ -1,6 +1,6 @@
 {
   "name": "native-boost",
-  "version": "1.46.0",
+  "version": "1.56.0",
   "description": "Boost library installed via NMP",
   "keywords": [
     "boost",

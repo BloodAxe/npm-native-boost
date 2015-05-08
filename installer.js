@@ -23,11 +23,11 @@ function is64bit() {
 
 var cdn = 'http://static.computer-vision-talks.com/dist/boost/';
 
-var opencvArchive = '';
+var boostArchive = '';
 
 if (isWindows()) {
     if (is64bit()) {
-        opencvArchive = cdn + 'boost-1.56-vc12-x64.zip';
+        boostArchive = cdn + 'boost-1.56-vc12-x64.zip';
     }
     else {
         boostArchive = cdn + 'boost-1.56-vc12-x86.zip';        
@@ -58,7 +58,7 @@ function runInboostDoesNotExists(cb) {
 runInboostDoesNotExists(function() {
     console.log('Loading boost from ', boostArchive);
 
-    var download = new Download({ extract: true, strip: (isUnix() || isDarwin()) })
+    var download = new Download({ extract: true, strip: true })
         .get(boostArchive)
         .dest(path.resolve(__dirname, 'boost'))
         .use(progress());
